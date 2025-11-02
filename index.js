@@ -10,7 +10,7 @@
  * - Pair Code implementation inspired by TechGod143 & DGXEON
  */
 require('./settings')
-const Boom = require('boom')
+const Boom = { badRequest: (msg)=>({output:{payload:{message:msg}}}) }
 const fs = require('fs')
 const chalk = require('chalk')
 const FileType = require('file-type')
